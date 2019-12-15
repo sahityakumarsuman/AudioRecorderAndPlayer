@@ -1,0 +1,94 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <com.example.playerandrecorder.Widgets.SimpleWaveformView
+        android:id="@+id/list_item_waveform"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_waveform_height"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/spacing_double"
+        android:layout_marginTop="@dimen/spacing_tiny"
+        android:layout_marginEnd="@dimen/spacing_double"
+        android:layout_marginBottom="@dimen/spacing_tiny" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/spacing_small"
+        android:contentDescription="@string/btn_play"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_play_circle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/list_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingStart="@dimen/spacing_tiny"
+                android:paddingLeft="@dimen/spacing_tiny"
+                android:paddingTop="@dimen/spacing_normal"
+                android:paddingEnd="@dimen/spacing_normal"
+                android:paddingRight="@dimen/spacing_normal"
+                android:textColor="@color/text_primary_light"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                tools:text="asfasfasfasf asfa sfasf asfa sfa fas fasf" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/spacing_normal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/list_item_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:maxLines="1"
+                android:paddingStart="@dimen/spacing_tiny"
+                android:paddingLeft="@dimen/spacing_tiny"
+                android:paddingEnd="@dimen/spacing_small"
+                android:paddingRight="@dimen/spacing_small"
+                android:textColor="@color/text_primary_light2"
+                android:textSize="@dimen/text_medium"
+                tools:text="@string/app_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/list_item_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:maxLines="1"
+                android:paddingStart="@dimen/spacing_tiny"
+                android:paddingLeft="@dimen/spacing_tiny"
+                android:paddingEnd="@dimen/spacing_medium"
+                android:paddingRight="@dimen/spacing_medium"
+                android:textColor="@color/text_primary_light2"
+                android:textSize="@dimen/text_medium"
+                tools:text="@string/app_name" />
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>
